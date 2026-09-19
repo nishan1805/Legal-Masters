@@ -10,7 +10,7 @@ export default function TrademarkCard({
   classNumber,
 }: TrademarkCardProps) {
   return (
-    <div className="flex h-[120px] w-full flex-col justify-between rounded-[12px] border border-[#E5E5E5] bg-white p-4">
+    <div className="flex min-h-[220px] w-full flex-col justify-between rounded-[12px] border border-[#E5E5E5] bg-white p-6">
 
       {/* Trademark */}
       <div className="flex flex-1 items-center justify-center">
@@ -21,14 +21,14 @@ export default function TrademarkCard({
             className="max-h-[60px] max-w-[180px] object-contain"
           />
         ) : (
-          <p className="text-center font-[Poppins] text-[20px] font-semibold leading-7 text-[#212121]">
+          <p className="text-center font-poppins text-[20px] font-semibold leading-7 text-[#212121]">
             {name}
           </p>
         )}
       </div>
 
       {/* Class */}
-      <p className="font-[Inter] text-[12px] font-medium leading-4 text-[#525252] text-center">
+      <p className="font-sans text-[12px] font-medium leading-4 text-[#525252] text-center">
         Class {classNumber}
       </p>
 

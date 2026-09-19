@@ -35,7 +35,7 @@ const cards = [
 
 export default function WhyChooseLegalMasters() {
   return (
-    <section className="w-full bg-[#174A8B] px-4 py-12 sm:px-6 md:px-8 lg:px-16 xl:px-[120px] lg:py-16">
+    <section id="why-us" className="w-full bg-[#174A8B] px-4 py-12 sm:px-6 md:px-8 lg:px-16 xl:px-[120px] lg:py-16">
 
       <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 lg:gap-16">
 
@@ -44,11 +44,11 @@ export default function WhyChooseLegalMasters() {
         ========================== */}
         <div className="flex w-full flex-col items-center gap-4 text-center">
 
-          <h2 className="font-[Urbanist] text-[32px] font-bold leading-[40px] text-white sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
+          <h2 className="font-heading text-[32px] font-bold leading-[40px] text-white sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
             Why Choose Legal Masters
           </h2>
 
-          <p className="font-[Inter] text-[18px] font-normal leading-[28px] text-white sm:text-[20px] sm:leading-[30px] lg:text-[24px] lg:leading-[32px]">
+          <p className="font-sans text-[18px] font-normal leading-[28px] text-white sm:text-[20px] sm:leading-[30px] lg:text-[24px] lg:leading-[32px]">
             Your trusted partner for all legal, tax, and compliance needs
           </p>
 
@@ -115,11 +115,11 @@ export default function WhyChooseLegalMasters() {
 
                 {/* Text */}
                 <div className="flex w-full flex-col gap-3">
-                  <h3 className="font-[Inter] text-[20px] font-bold leading-[28px] text-[#0E2D54] sm:text-[24px] sm:leading-[32px]">
+                  <h3 className="font-sans text-[20px] font-bold leading-[28px] text-[#0E2D54] sm:text-[24px] sm:leading-[32px]">
                     {card.title}
                   </h3>
 
-                  <p className="font-[Inter] text-[14px] font-semibold leading-[20px] text-[#757575] sm:text-[16px] sm:leading-[24px]">
+                  <p className="font-sans text-[14px] font-semibold leading-[20px] text-[#757575] sm:text-[16px] sm:leading-[24px]">
                     {card.description}
                   </p>
                 </div>

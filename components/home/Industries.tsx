@@ -22,11 +22,11 @@ export default function TrustedIndustries() {
         ========================== */}
         <div className="flex w-full flex-col items-center gap-3 text-center sm:gap-4">
 
-          <h2 className="font-[Urbanist] text-[32px] font-bold leading-[40px] text-[#0E2D54] sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
+          <h2 className="font-heading text-[32px] font-bold leading-[40px] text-[#0E2D54] sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
             Trusted Across Industries
           </h2>
 
-          <p className="font-[Inter] text-base font-normal leading-6 text-[#525252] sm:text-lg sm:leading-7 lg:text-[24px] lg:leading-[32px]">
+          <p className="font-sans text-base font-normal leading-6 text-[#525252] sm:text-lg sm:leading-7 lg:text-[24px] lg:leading-[32px]">
             Businesses across India rely on Legal Masters.
           </p>
 

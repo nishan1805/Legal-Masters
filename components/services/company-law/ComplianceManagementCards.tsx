@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, FileCheck } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const complianceCards = [
   {
@@ -74,11 +74,11 @@ export default function ComplianceManagementCards() {
         >
           {/* Heading + Description */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-[Inter] text-[20px] font-semibold leading-7 text-[#212121]">
+            <h3 className="font-sans text-[20px] font-semibold leading-7 text-[#212121]">
               {card.title}
             </h3>
 
-            <p className="font-[Inter] text-[14px] font-normal leading-5 text-[#525252]">
+            <p className="font-sans text-[14px] font-normal leading-5 text-[#525252]">
               {card.description}
             </p>
           </div>
@@ -86,11 +86,11 @@ export default function ComplianceManagementCards() {
           {/* Enquire Now */}
           <Link
             href="/contact"
-            className="inline-flex h-10 w-fit items-center gap-1 py-2 font-[Inter] text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
+            className="inline-flex h-10 w-fit items-center gap-1 py-2 font-sans text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
           >
             <span>Enquire now</span>
 
-            <ArrowRight
+            <ChevronRight
               size={24}
               strokeWidth={1.8}
             />

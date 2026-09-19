@@ -5,15 +5,15 @@ import { ChevronDown, Lock } from "lucide-react";
 
 export default function ContactForm() {
   return (
-    <div className="flex h-[684px] w-[608px] flex-col gap-[32px] rounded-[16px] bg-white p-[32px]">
+    <div className="flex w-full max-w-[608px] flex-col gap-6 rounded-[16px] bg-white p-6 sm:gap-8 sm:p-8">
 
       {/* =========================================
           HEADING
       ========================================= */}
 
-      <div className="flex h-[32px] w-[544px]">
+      <div className="flex w-full">
 
-        <h2 className="font-[Inter] text-[24px] font-semibold leading-[32px] text-[#1A2F5A]">
+        <h2 className="font-sans text-[20px] font-semibold leading-[28px] text-[#1A2F5A] sm:text-[24px] sm:leading-[32px]">
           Send us a Message
         </h2>
 
@@ -24,18 +24,18 @@ export default function ContactForm() {
           CONTACT INPUTS
       ========================================= */}
 
-      <div className="flex h-[440px] w-[544px] flex-col gap-[16px]">
+      <div className="flex w-full flex-col gap-4">
 
 
         {/* =======================================
             FULL NAME
         ======================================= */}
 
-        <div className="flex h-[80px] w-[544px] flex-col gap-[8px]">
+        <div className="flex w-full flex-col gap-2">
 
           <label
             htmlFor="fullName"
-            className="h-[24px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121]"
+            className="font-sans text-[16px] font-medium leading-[24px] text-[#212121]"
           >
             Full Name
           </label>
@@ -44,7 +44,7 @@ export default function ContactForm() {
             id="fullName"
             type="text"
             placeholder="Your name"
-            className="h-[48px] w-[544px] rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-[Inter] text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
+            className="h-[48px] w-full rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-sans text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
           />
 
         </div>
@@ -54,16 +54,16 @@ export default function ContactForm() {
             EMAIL + PHONE
         ======================================= */}
 
-        <div className="flex h-[80px] w-[544px] gap-[16px]">
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
 
 
           {/* EMAIL */}
 
-          <div className="flex h-[80px] w-[264px] flex-col gap-[8px]">
+          <div className="flex w-full flex-col gap-2">
 
             <label
               htmlFor="email"
-              className="h-[24px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121]"
+              className="font-sans text-[16px] font-medium leading-[24px] text-[#212121]"
             >
               Email Address
             </label>
@@ -72,7 +72,7 @@ export default function ContactForm() {
               id="email"
               type="email"
               placeholder="you@company.com"
-              className="h-[48px] w-[264px] rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-[Inter] text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
+              className="h-[48px] w-full rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-sans text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
             />
 
           </div>
@@ -80,11 +80,11 @@ export default function ContactForm() {
 
           {/* PHONE */}
 
-          <div className="flex h-[80px] w-[264px] flex-col gap-[8px]">
+          <div className="flex w-full flex-col gap-2">
 
             <label
               htmlFor="phone"
-              className="h-[24px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121]"
+              className="font-sans text-[16px] font-medium leading-[24px] text-[#212121]"
             >
               Phone Number
             </label>
@@ -93,7 +93,7 @@ export default function ContactForm() {
               id="phone"
               type="tel"
               placeholder="+91 XXXXX XXXXX"
-              className="h-[48px] w-[264px] rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-[Inter] text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
+              className="h-[48px] w-full rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-sans text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
             />
 
           </div>
@@ -105,22 +105,22 @@ export default function ContactForm() {
             SERVICE
         ======================================= */}
 
-        <div className="flex h-[80px] w-[544px] flex-col gap-[8px]">
+        <div className="flex w-full flex-col gap-2">
 
           <label
             htmlFor="service"
-            className="h-[24px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121]"
+            className="font-sans text-[16px] font-medium leading-[24px] text-[#212121]"
           >
             Select Service
           </label>
 
 
-          <div className="relative h-[48px] w-[544px]">
+          <div className="relative w-full">
 
             <select
               id="service"
               defaultValue=""
-              className="h-[48px] w-[544px] appearance-none rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-[Inter] text-[16px] font-normal leading-[24px] text-[#757575] outline-none focus:border-[#4774AD]"
+              className="h-[48px] w-full appearance-none rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-sans text-[16px] font-normal leading-[24px] text-[#757575] outline-none focus:border-[#4774AD]"
             >
 
               <option value="" disabled>
@@ -156,7 +156,7 @@ export default function ContactForm() {
 
             {/* Dropdown Icon */}
 
-            <div className="pointer-events-none absolute right-[16px] top-1/2 flex h-[16px] w-[16px] -translate-y-1/2 items-center justify-center rounded-[6px]">
+            <div className="pointer-events-none absolute right-[16px] top-1/2 flex h-[16px] w-[16px] -translate-y-1/2 items-center justify-center">
 
               <ChevronDown
                 size={16}
@@ -175,11 +175,11 @@ export default function ContactForm() {
             MESSAGE
         ======================================= */}
 
-        <div className="flex h-[152px] w-[544px] flex-col gap-[8px]">
+        <div className="flex w-full flex-col gap-2">
 
           <label
             htmlFor="message"
-            className="h-[24px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121]"
+            className="font-sans text-[16px] font-medium leading-[24px] text-[#212121]"
           >
             Message
           </label>
@@ -188,7 +188,7 @@ export default function ContactForm() {
           <textarea
             id="message"
             placeholder="Tell us about your requirements"
-            className="h-[120px] w-[544px] resize-none rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-[Inter] text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
+            className="h-[120px] w-full resize-none rounded-[8px] border-[0.8px] border-[#DCDCDC] bg-white px-[16px] py-[12px] font-sans text-[16px] font-normal leading-[24px] text-[#212121] outline-none placeholder:text-[#757575] focus:border-[#4774AD]"
           />
 
         </div>
@@ -200,14 +200,14 @@ export default function ContactForm() {
           BUTTON + SECURITY
       ========================================= */}
 
-      <div className="flex h-[84px] w-[544px] flex-col gap-[16px]">
+      <div className="flex w-full flex-col gap-4">
 
 
         {/* REQUEST CALLBACK BUTTON */}
 
         <button
           type="button"
-          className="flex h-[48px] w-[544px] items-center justify-center gap-[10px] rounded-[8px] bg-[#FFCC33] px-[24px] py-[12px] font-[Inter] text-[16px] font-medium leading-[24px] text-[#212121] transition hover:bg-[#f5c229]"
+          className="flex h-[48px] w-full items-center justify-center gap-[10px] rounded-[8px] bg-[#FFCC33] px-[24px] py-[12px] font-sans text-[16px] font-medium leading-[24px] text-[#212121] transition hover:bg-[#f5c229]"
         >
           Request Callback
         </button>
@@ -215,9 +215,9 @@ export default function ContactForm() {
 
         {/* SECURITY */}
 
-        <div className="flex h-[20px] w-[544px] items-center justify-center gap-[4px]">
+        <div className="flex w-full items-center justify-center gap-1">
 
-          <div className="flex h-[20px] w-[20px] items-center justify-center">
+          <div className="flex h-[20px] w-[20px] shrink-0 items-center justify-center">
 
             <Lock
               size={14}
@@ -228,7 +228,7 @@ export default function ContactForm() {
           </div>
 
 
-          <p className="font-[Inter] text-[14px] font-medium leading-[20px] text-[#757575]">
+          <p className="font-sans text-[14px] font-medium leading-[20px] text-[#757575]">
             Your information is secure and confidential.
           </p>
 
@@ -239,4 +239,3 @@ export default function ContactForm() {
     </div>
   );
 }
-

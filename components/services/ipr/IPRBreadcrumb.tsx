@@ -9,7 +9,7 @@ export default function IPRBreadcrumb() {
         {/* Home */}
         <Link
           href="/"
-          className="font-[Inter] text-[14px] font-normal leading-[20px] text-[#525252] transition hover:text-[#195199]"
+          className="font-sans text-[14px] font-normal leading-[20px] text-[#525252] transition hover:text-[#195199]"
         >
           Home
         </Link>
@@ -23,7 +23,7 @@ export default function IPRBreadcrumb() {
         />
 
         {/* Current Page */}
-        <span className="font-[Inter] text-[14px] font-medium leading-[20px] text-[#195199]">
+        <span className="font-sans text-[14px] font-medium leading-[20px] text-[#195199]">
           Intellectual Property Rights
         </span>
 

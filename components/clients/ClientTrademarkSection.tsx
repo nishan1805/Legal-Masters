@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ClientFilters from "./ClientsFilters";
+import Pagination from "./Pagination";
 import TrademarkGrid, { Trademark } from "./TrademarkGrid";
 
 
@@ -108,10 +109,14 @@ const trademarks: Trademark[] = [
   },
 ];
 
+const pageSize = 24;
+const totalCount = 2049;
+
 export default function ClientsTrademarkSection() {
   const [activeTab, setActiveTab] = useState<
     "All" | "Word" | "Device"
   >("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredTrademarks =
     activeTab === "All"
@@ -119,6 +124,10 @@ export default function ClientsTrademarkSection() {
       : trademarks.filter(
           (trademark) => trademark.type === activeTab
         );
+
+  const totalPages = Math.ceil(totalCount / pageSize);
+  const start = (currentPage - 1) * pageSize + 1;
+  const end = Math.min(currentPage * pageSize, totalCount);
 
   return (
     <div className="flex w-full flex-col gap-0">
@@ -130,7 +139,18 @@ export default function ClientsTrademarkSection() {
         setSearchQuery={() => {}}
       />
 
-      <TrademarkGrid trademarks={filteredTrademarks} />
+      <TrademarkGrid
+        trademarks={filteredTrademarks}
+        start={start}
+        end={end}
+        totalCount={totalCount}
+      />
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
 
     </div>
   );

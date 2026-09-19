@@ -83,11 +83,11 @@ export default function CompanyLawHero() {
 
         <div className="mx-auto flex w-full max-w-[1194px] flex-col items-center gap-6 text-center">
 
-          <h1 className="font-[Urbanist] text-[32px] font-bold leading-[40px] text-[#FFBF00] sm:text-[40px] sm:leading-[48px] md:text-[44px] md:leading-[52px] lg:text-[48px] lg:leading-[56px]">
-            Company Law Services
+          <h1 className="font-heading text-[32px] font-bold leading-[40px] text-[#FFBF00] sm:text-[40px] sm:leading-[48px] md:text-[44px] md:leading-[52px] lg:text-[48px] lg:leading-[56px]">
+            Company Law
           </h1>
 
-          <p className="max-w-[1000px] font-[Inter] text-[18px] font-medium leading-[28px] text-[#E8EEF5] sm:text-[20px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[32px]">
+          <p className="max-w-[1000px] font-sans text-[18px] font-medium leading-[28px] text-[#E8EEF5] sm:text-[20px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[32px]">
             Build and manage your business with complete legal support - from
             company incorporation and compliance to governance, restructuring,
             and regulatory filings.

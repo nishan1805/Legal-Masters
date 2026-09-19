@@ -9,18 +9,24 @@ export type Trademark = {
 
 type TrademarkGridProps = {
   trademarks: Trademark[];
+  start: number;
+  end: number;
+  totalCount: number;
 };
 
 export default function TrademarkGrid({
   trademarks,
+  start,
+  end,
+  totalCount,
 }: TrademarkGridProps) {
   return (
     <section className="w-full px-6 sm:px-10 md:px-12 lg:px-[120px]">
       <div className="mx-auto w-full max-w-[1200px]">
 
         {/* Result count */}
-        <p className="mb-6 mt-5 font-[Inter] text-[14px] font-normal leading-5 text-[#525252]">
-          Showing {trademarks.length} trademarks
+        <p className="mb-6 mt-5 font-sans text-[14px] font-normal leading-5 text-[#525252]">
+          {`Showing ${start}-${end} of ${totalCount} trademarks`}
         </p>
 
         {/* Grid */}

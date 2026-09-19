@@ -1,17 +1,12 @@
 
 "use client";
 
-import {
-  ArrowRight,
-  Lock,
-  Zap,
-  UserRound,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaLock, FaBolt, FaUserTie, FaWhatsapp } from "react-icons/fa";
 
 export default function BusinessJourneyCTA() {
   return (
-    <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 md:px-8 lg:px-12 xl:px-[120px] xl:py-[64px]">
+    <section className="w-full bg-white px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:px-12 xl:px-[120px] xl:py-[80px]">
       
       <div
         className="
@@ -40,10 +35,11 @@ export default function BusinessJourneyCTA() {
         "
         style={{
           backgroundImage:
-            "linear-gradient(180deg, rgba(11,34,64,0.88) 0%, rgba(25,81,153,0.92) 100%), url('/images/Background-image.png')",
+            "linear-gradient(180deg, #0B2240 0%, #174A8B 100%), url('/images/Background-image.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundBlendMode: "screen",
         }}
       >
 
@@ -57,7 +53,7 @@ export default function BusinessJourneyCTA() {
               className="
                 w-full
                 text-center
-                font-[Urbanist]
+                font-heading
                 text-[32px]
                 font-bold
                 leading-[40px]
@@ -80,7 +76,7 @@ export default function BusinessJourneyCTA() {
             <p
               className="
                 text-center
-                font-[Inter]
+                font-sans
                 text-[16px]
                 font-normal
                 leading-[24px]
@@ -131,7 +127,7 @@ export default function BusinessJourneyCTA() {
                 bg-[#FFBF00]
                 px-6
                 py-3
-                font-[Inter]
+                font-sans
                 text-[16px]
                 font-medium
                 leading-6
@@ -166,7 +162,7 @@ export default function BusinessJourneyCTA() {
                 bg-[#018A3E]
                 px-6
                 py-3
-                font-[Inter]
+                font-sans
                 text-[16px]
                 font-medium
                 leading-6
@@ -176,9 +172,8 @@ export default function BusinessJourneyCTA() {
                 sm:h-[56px]
               "
             >
-              <MessageCircle
+              <FaWhatsapp
                 size={24}
-                strokeWidth={2}
                 className="text-white"
               />
 
@@ -207,14 +202,13 @@ export default function BusinessJourneyCTA() {
             <div className="flex items-center gap-2">
 
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white">
-                <Lock
+                <FaLock
                   size={14}
-                  strokeWidth={2.5}
                   className="text-[#E8AE00]"
                 />
               </div>
 
-              <span className="whitespace-nowrap font-[Inter] text-[14px] font-normal leading-6 text-white sm:text-[16px]">
+              <span className="whitespace-nowrap font-sans text-[14px] font-normal leading-6 text-white sm:text-[16px]">
                 Free Consultation
               </span>
 
@@ -225,14 +219,13 @@ export default function BusinessJourneyCTA() {
             <div className="flex items-center gap-2">
 
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white">
-                <Zap
-                  size={18}
-                  strokeWidth={2.5}
+                <FaBolt
+                  size={16}
                   className="text-[#E8AE00]"
                 />
               </div>
 
-              <span className="whitespace-nowrap font-[Inter] text-[14px] font-normal leading-6 text-white sm:text-[16px]">
+              <span className="whitespace-nowrap font-sans text-[14px] font-normal leading-6 text-white sm:text-[16px]">
                 Quick Response
               </span>
 
@@ -243,14 +236,13 @@ export default function BusinessJourneyCTA() {
             <div className="flex items-center gap-2">
 
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white">
-                <UserRound
+                <FaUserTie
                   size={14}
-                  strokeWidth={2.5}
                   className="text-[#E8AE00]"
                 />
               </div>
 
-              <span className="whitespace-nowrap font-[Inter] text-[14px] font-normal leading-6 text-white sm:text-[16px]">
+              <span className="whitespace-nowrap font-sans text-[14px] font-normal leading-6 text-white sm:text-[16px]">
                 Expert Guidance
               </span>
 

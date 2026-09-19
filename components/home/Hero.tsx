@@ -7,88 +7,24 @@ export default function Hero() {
     <section className="relative w-full overflow-hidden bg-white">
 
       <div
-        className="relative mx-auto min-h-[850px] max-w-[1792px] px-5 py-12 sm:min-h-[850px] sm:px-8 sm:py-16 lg:flex lg:min-h-[620px] lg:items-center lg:px-16 lg:py-16"
+        className="relative min-h-[calc(100svh-80px)] w-full px-5 py-16 sm:min-h-[calc(100svh-90px)] sm:px-8 sm:py-20 lg:flex lg:min-h-[calc(100svh-100px)] lg:items-center lg:px-[120px] lg:py-20"
         style={{
           background:
             "radial-gradient(circle at 75% 50%, rgba(255, 210, 70, 0.25) 0%, rgba(255, 210, 70, 0.12) 20%, rgba(255, 210, 70, 0.04) 40%, transparent 65%)",
         }}
       >
 
-        {/* =================================================
-            DESKTOP BACKGROUND ARTWORK
-        ================================================= */}
-
-        <div className="pointer-events-none absolute inset-0 hidden lg:block">
-
-          <Image
-            src="/images/hero/Books.svg"
-            alt=""
-            width={120}
-            height={120}
-            className="absolute right-[28%] top-[70px]"
-          />
-
-          <Image
-            src="/images/hero/Clipboard.svg"
-            alt=""
-            width={150}
-            height={150}
-            className="absolute right-[5%] top-[30px]"
-          />
-
-          <Image
-            src="/images/hero/Laptop.svg"
-            alt=""
-            width={130}
-            height={130}
-            className="absolute bottom-[150px] right-[29%]"
-          />
-
-          <Image
-            src="/images/hero/Object.svg"
-            alt=""
-            width={100}
-            height={100}
-            className="absolute bottom-[70px] right-[4%]"
-          />
-
-          <Image
-            src="/images/hero/Stamp.svg"
-            alt=""
-            width={80}
-            height={80}
-            className="absolute bottom-[200px] right-[4%]"
-          />
-
-          <Image
-            src="/images/hero/shieldcontainer.svg"
-            alt=""
-            width={140}
-            height={100}
-            className="absolute bottom-[100px] right-[17%]"
-          />
-
-          <Image
-            src="/images/hero/Goldenshield.svg"
-            alt="Golden Shield"
-            width={200}
-            height={200}
-            priority
-            className="shield-float absolute right-[14%] top-1/2 -translate-y-1/2"
-          />
-
-        </div>
-
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col lg:flex-row lg:items-center lg:justify-between">
 
         {/* =================================================
             CONTENT
         ================================================= */}
 
-        <div className="relative z-10 w-full max-w-[900px] lg:ml-[100px]">
+        <div className="relative z-10 w-full lg:min-w-0 lg:flex-1">
 
           {/* BUSINESS COUNT */}
 
-          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-2 shadow-sm sm:mb-8 sm:gap-3 sm:px-4 sm:py-2.5">
+          <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-2 sm:mb-8 sm:gap-3 sm:px-4 sm:py-2.5">
 
             <div className="flex shrink-0 -space-x-2">
 
@@ -130,7 +66,7 @@ export default function Hero() {
 
           {/* HEADING */}
 
-          <h1 className="max-w-[900px] font-[Urbanist] text-[38px] font-bold leading-[44px] sm:text-[48px] sm:leading-[56px] md:text-[56px] md:leading-[64px] lg:text-[64px] lg:leading-[72px]">
+          <h1 className="max-w-[900px] font-heading text-[38px] font-bold leading-[44px] text-[#0B2748] sm:text-[48px] sm:leading-[56px] md:text-[56px] md:leading-[64px] lg:text-[60px] lg:leading-[68px]">
 
             Complete Legal, Tax &
 
@@ -151,7 +87,7 @@ export default function Hero() {
 
           {/* DESCRIPTION */}
 
-          <p className="mt-5 text-base leading-6 text-[#333333] sm:mt-6 sm:text-lg sm:leading-7 lg:text-xl">
+          <p className="mt-5 text-lg font-medium leading-7 text-[#333333] sm:mt-6 sm:text-xl sm:leading-8 lg:text-2xl">
             Everything your business needs under one roof.
           </p>
 
@@ -162,14 +98,14 @@ export default function Hero() {
 
             <Link
               href="#contact"
-              className="inline-flex h-[48px] items-center justify-center rounded-full bg-[#E8AE00] px-4 font-[Inter] text-sm font-medium leading-6 text-[#111111] transition hover:bg-[#E5A700] sm:flex-none sm:px-7 sm:text-base"
+              className="inline-flex h-[48px] items-center justify-center rounded-full bg-[#E8AE00] px-4 font-sans text-sm font-medium leading-6 text-[#111111] transition hover:bg-[#E5A700] sm:flex-none sm:px-7 sm:text-base"
             >
               Talk to Experts
             </Link>
 
             <Link
               href="#services"
-              className="inline-flex h-[48px] flex-1 items-center justify-center gap-[6px] rounded-[24px] border-[1.5px] border-[#B58800] px-3 py-3 font-[Inter] text-sm font-medium leading-6 text-[#B58800] transition hover:bg-[#FFF7D6] sm:w-[178px] sm:flex-none sm:px-6 sm:text-base"
+              className="inline-flex h-[48px] flex-1 items-center justify-center gap-[6px] rounded-[24px] border-[1.5px] border-[#B58800] px-3 py-3 font-sans text-sm font-medium leading-6 text-[#B58800] transition hover:bg-[#FFF7D6] sm:flex-none sm:whitespace-nowrap sm:px-6 sm:text-base"
             >
               Explore Services
             </Link>
@@ -264,6 +200,87 @@ export default function Hero() {
             />
 
           </div>
+
+        </div>
+
+
+        {/* =================================================
+            DESKTOP ARTWORK
+            (self-contained box that stays inside the section's
+            own right padding — never overlaps the margin)
+        ================================================= */}
+
+        <div className="relative z-10 hidden shrink-0 items-center justify-center lg:flex lg:h-[400px] lg:w-[400px]">
+
+          <div className="relative h-full w-full">
+
+            {/* Books */}
+            <Image
+              src="/images/hero/Books.svg"
+              alt=""
+              width={100}
+              height={100}
+              className="absolute left-0 top-[4%] h-auto w-[95px]"
+            />
+
+            {/* Clipboard */}
+            <Image
+              src="/images/hero/Clipboard.svg"
+              alt=""
+              width={115}
+              height={115}
+              className="absolute right-0 top-0 h-auto w-[110px]"
+            />
+
+            {/* Laptop */}
+            <Image
+              src="/images/hero/Laptop.svg"
+              alt=""
+              width={105}
+              height={105}
+              className="absolute bottom-[10%] left-0 h-auto w-[100px]"
+            />
+
+            {/* Object / ring */}
+            <Image
+              src="/images/hero/Object.svg"
+              alt=""
+              width={80}
+              height={80}
+              className="absolute bottom-0 left-1/2 h-auto w-[75px] -translate-x-1/2"
+            />
+
+            {/* Stamp */}
+            <Image
+              src="/images/hero/Stamp.svg"
+              alt=""
+              width={65}
+              height={65}
+              className="absolute bottom-[6%] right-0 h-auto w-[60px]"
+            />
+
+            {/* Shield container (subtle backing) */}
+            <Image
+              src="/images/hero/shieldcontainer.svg"
+              alt=""
+              width={130}
+              height={94}
+              className="absolute bottom-[16%] left-1/2 h-auto w-[125px] -translate-x-1/2 opacity-80"
+            />
+
+            {/* GOLDEN SHIELD */}
+            <Image
+              src="/images/hero/Goldenshield.svg"
+              alt="Golden Shield"
+              width={230}
+              height={230}
+              priority
+              className="shield-float absolute left-1/2 top-1/2 z-10 h-auto w-[220px] -translate-x-1/2 -translate-y-1/2"
+            />
+
+          </div>
+
+        </div>
 
         </div>
 

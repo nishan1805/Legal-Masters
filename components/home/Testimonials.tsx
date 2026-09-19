@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
+import { MdFormatQuote } from "react-icons/md";
 
 const testimonials = [
   {
@@ -64,10 +62,10 @@ function TestimonialCard({
   return (
     <div
       className="
-        flex h-[244px] w-full shrink-0 flex-col gap-4
+        flex min-h-[244px] w-[85%] shrink-0 snap-start flex-col gap-4
         rounded-[20px] border border-[#E0E0E0]
         bg-white p-6
-        md:w-[calc(50%-12px)]
+        sm:w-[calc(50%-12px)]
         lg:w-[467px]
       "
     >
@@ -88,8 +86,8 @@ function TestimonialCard({
           <div className="min-w-0">
             <h3
               className="
-                truncate font-[Inter]
-                text-[18px] font-medium leading-7
+                truncate font-sans
+                text-[18px] font-semibold leading-7
                 text-[#313131]
                 lg:text-[24px] lg:leading-8
               "
@@ -99,7 +97,7 @@ function TestimonialCard({
 
             <p
               className="
-                truncate font-[Inter]
+                truncate font-sans
                 text-[14px] font-medium leading-6
                 text-[#525252]
                 lg:text-[16px]
@@ -111,13 +109,13 @@ function TestimonialCard({
         </div>
 
         {/* Quote */}
-        <div className="shrink-0 text-[37px] font-bold leading-[27px] text-[#FFCC33]">
-          ”
+        <div className="shrink-0 text-[#FFCC33]">
+          <MdFormatQuote size={36} />
         </div>
       </div>
 
       {/* Review */}
-      <p className="font-[Inter] text-[14px] font-normal leading-5 text-[#212121]">
+      <p className="font-sans text-[14px] font-normal leading-5 text-[#212121]">
         {review}
       </p>
     </div>
@@ -125,22 +123,10 @@ function TestimonialCard({
 }
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) =>
-      Math.min(prev + 1, testimonials.length - 1)
-    );
-  };
-
   return (
     <section
       className="
-        w-full bg-white
+        w-full bg-[#174A8B]
         px-6 py-12
         sm:px-10
         lg:px-[120px] lg:py-[64px]
@@ -169,9 +155,9 @@ export default function Testimonials() {
         >
           <h2
             className="
-              font-[Urbanist]
+              font-heading
               text-[32px] font-bold leading-10
-              text-[#0E2D54]
+              text-white
               sm:text-[40px] sm:leading-[48px]
               lg:text-[48px] lg:leading-[56px]
             "
@@ -181,9 +167,9 @@ export default function Testimonials() {
 
           <p
             className="
-              font-[Inter]
+              font-sans
               text-[18px] font-normal leading-7
-              text-[#525252]
+              text-white/80
               sm:text-[20px]
               lg:text-[24px] lg:leading-8
             "
@@ -194,109 +180,25 @@ export default function Testimonials() {
 
         {/* =========================
             TESTIMONIALS
+            (horizontally scrollable carousel — touch/drag swipe,
+            no visible nav controls)
         ========================== */}
 
-        <div className="flex w-full items-center gap-3 sm:gap-4 lg:gap-6">
-
-          {/* Previous Button */}
-          {currentIndex > 0 && (
-            <button
-              type="button"
-              onClick={handlePrevious}
-              aria-label="Previous testimonials"
-              className="
-                flex h-10 w-10 shrink-0
-                items-center justify-center
-                rounded-full
-                border border-[#0E2D54]
-                text-xl text-[#0E2D54]
-                transition
-                hover:bg-[#0E2D54]
-                hover:text-white
-                sm:h-12 sm:w-12
-                sm:text-[28px]
-              "
-            >
-              &lt;
-            </button>
-          )}
-
-          {/* =========================
-              MOBILE
-              1 CARD
-          ========================== */}
-
-          <div className="min-w-0 flex-1 overflow-hidden md:hidden">
-            <div className="flex w-full">
-              <TestimonialCard
-                {...testimonials[currentIndex]}
-              />
-            </div>
-          </div>
-
-          {/* =========================
-              TABLET
-              2 CARDS
-          ========================== */}
-
-          <div className="hidden min-w-0 flex-1 overflow-hidden md:block lg:hidden">
-            <div className="flex gap-6">
-
-              {testimonials
-                .slice(currentIndex, currentIndex + 2)
-                .map((testimonial) => (
-                  <TestimonialCard
-                    key={testimonial.name}
-                    {...testimonial}
-                  />
-                ))}
-
-            </div>
-          </div>
-
-          {/* =========================
-              DESKTOP
-              2 FULL + HALF THIRD
-          ========================== */}
-
-          <div className="hidden min-w-0 flex-1 overflow-hidden lg:block">
-            <div className="flex gap-6">
-
-              {testimonials
-                .slice(currentIndex, currentIndex + 3)
-                .map((testimonial) => (
-                  <TestimonialCard
-                    key={testimonial.name}
-                    {...testimonial}
-                  />
-                ))}
-
-            </div>
-          </div>
-
-          {/* Next Button */}
-          {currentIndex < testimonials.length - 1 && (
-            <button
-              type="button"
-              onClick={handleNext}
-              aria-label="Next testimonials"
-              className="
-                flex h-10 w-10 shrink-0
-                items-center justify-center
-                rounded-full
-                border border-[#0E2D54]
-                text-xl text-[#0E2D54]
-                transition
-                hover:bg-[#0E2D54]
-                hover:text-white
-                sm:h-12 sm:w-12
-                sm:text-[28px]
-              "
-            >
-              &gt;
-            </button>
-          )}
-
+        <div
+          className="
+            scrollbar-hide flex w-full
+            snap-x snap-mandatory
+            scroll-smooth
+            gap-6 overflow-x-auto
+            scroll-px-6
+          "
+        >
+          {testimonials.map((testimonial) => (
+            <TestimonialCard
+              key={testimonial.name}
+              {...testimonial}
+            />
+          ))}
         </div>
       </div>
     </section>
