@@ -14,13 +14,16 @@ export default function Hero() {
         }}
       >
 
-        <div className="mx-auto flex w-full max-w-[1200px] flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative mx-auto flex w-full max-w-[1200px] flex-col">
 
         {/* =================================================
             CONTENT
+            (sits above the artwork — in the design the heading
+            overlaps the faint illustration rather than sitting
+            in a separate column beside it)
         ================================================= */}
 
-        <div className="relative z-10 w-full lg:min-w-0 lg:flex-1">
+        <div className="relative z-10 w-full lg:max-w-[760px]">
 
           {/* BUSINESS COUNT */}
 
@@ -66,7 +69,7 @@ export default function Hero() {
 
           {/* HEADING */}
 
-          <h1 className="max-w-[900px] font-heading text-[38px] font-bold leading-[44px] text-[#0B2748] sm:text-[48px] sm:leading-[56px] md:text-[56px] md:leading-[64px] lg:text-[60px] lg:leading-[68px]">
+          <h1 className="max-w-[900px] font-heading text-[38px] font-bold leading-[44px] text-[#0B2748] sm:text-[48px] sm:leading-[56px] md:text-[56px] md:leading-[64px] lg:text-[56px] lg:leading-[64px]">
 
             Complete Legal, Tax &
 
@@ -87,7 +90,7 @@ export default function Hero() {
 
           {/* DESCRIPTION */}
 
-          <p className="mt-5 text-lg font-medium leading-7 text-[#333333] sm:mt-6 sm:text-xl sm:leading-8 lg:text-2xl">
+          <p className="mt-5 text-lg font-medium leading-7 text-[#333333] sm:mt-6 sm:text-xl sm:leading-8 lg:text-[30px] lg:leading-[40px]">
             Everything your business needs under one roof.
           </p>
 
@@ -210,7 +213,10 @@ export default function Hero() {
             own right padding — never overlaps the margin)
         ================================================= */}
 
-        <div className="relative z-10 hidden shrink-0 items-center justify-center lg:flex lg:h-[400px] lg:w-[400px]">
+        {/* Each asset already has its Figma opacity and rotation baked into the
+            SVG itself, so no CSS opacity/rotate is applied here — doing so
+            would double-apply them and wash the artwork out. */}
+        <div className="absolute right-0 top-1/2 z-0 hidden -translate-y-1/2 shrink-0 items-center justify-center lg:flex lg:h-[598px] lg:w-[588px]">
 
           <div className="relative h-full w-full">
 
@@ -218,64 +224,64 @@ export default function Hero() {
             <Image
               src="/images/hero/Books.svg"
               alt=""
-              width={100}
-              height={100}
-              className="absolute left-0 top-[4%] h-auto w-[95px]"
+              width={141}
+              height={163}
+              className="absolute left-[21.9%] top-[15.9%] h-auto w-[141px] -translate-x-1/2 -translate-y-1/2"
             />
 
             {/* Clipboard */}
             <Image
               src="/images/hero/Clipboard.svg"
               alt=""
-              width={115}
-              height={115}
-              className="absolute right-0 top-0 h-auto w-[110px]"
+              width={216}
+              height={217}
+              className="absolute left-[81.6%] top-[18.1%] h-auto w-[216px] -translate-x-1/2 -translate-y-1/2"
             />
 
             {/* Laptop */}
             <Image
               src="/images/hero/Laptop.svg"
               alt=""
-              width={105}
-              height={105}
-              className="absolute bottom-[10%] left-0 h-auto w-[100px]"
-            />
-
-            {/* Object / ring */}
-            <Image
-              src="/images/hero/Object.svg"
-              alt=""
-              width={80}
-              height={80}
-              className="absolute bottom-0 left-1/2 h-auto w-[75px] -translate-x-1/2"
+              width={189}
+              height={181}
+              className="absolute left-[16%] top-[73.1%] h-auto w-[189px] -translate-x-1/2 -translate-y-1/2"
             />
 
             {/* Stamp */}
             <Image
               src="/images/hero/Stamp.svg"
               alt=""
-              width={65}
-              height={65}
-              className="absolute bottom-[6%] right-0 h-auto w-[60px]"
+              width={108}
+              height={115}
+              className="absolute left-[88.7%] top-[66.2%] h-auto w-[108px] -translate-x-1/2 -translate-y-1/2"
             />
 
-            {/* Shield container (subtle backing) */}
+            {/* Pen */}
+            <Image
+              src="/images/hero/Object.svg"
+              alt=""
+              width={120}
+              height={82}
+              className="absolute left-[86%] top-[89%] h-auto w-[120px] -translate-x-1/2 -translate-y-1/2"
+            />
+
+            {/* Shield base / glow */}
             <Image
               src="/images/hero/shieldcontainer.svg"
               alt=""
-              width={130}
-              height={94}
-              className="absolute bottom-[16%] left-1/2 h-auto w-[125px] -translate-x-1/2 opacity-80"
+              width={185}
+              height={100}
+              className="absolute left-[51.7%] top-[91.7%] h-auto w-[185px] -translate-x-1/2 -translate-y-1/2"
             />
 
             {/* GOLDEN SHIELD */}
             <Image
               src="/images/hero/Goldenshield.svg"
               alt="Golden Shield"
-              width={230}
-              height={230}
+              width={249}
+              height={366}
               priority
-              className="shield-float absolute left-1/2 top-1/2 z-10 h-auto w-[220px] -translate-x-1/2 -translate-y-1/2"
+              className="shield-float absolute left-[51.7%] top-[61.7%] z-10 h-auto w-[249px] -translate-x-1/2 -translate-y-1/2"
             />
 
           </div>
