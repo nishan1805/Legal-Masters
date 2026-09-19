@@ -37,7 +37,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full bg-[#0B2748]">
+    <header className="relative z-50 w-full bg-[#0B2748]">
       <nav className="mx-auto flex h-[80px] w-full max-w-[1792px] items-center justify-between px-5 sm:h-[90px] sm:px-8 lg:h-[100px] lg:px-16">
         {/* =========================
             LOGO
@@ -193,7 +193,7 @@ export default function Navbar() {
       ========================== */}
 
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#0B2748] px-5 pb-5 md:hidden">
+        <div className="absolute left-0 right-0 top-full z-50 max-h-[calc(100svh-80px)] overflow-y-auto border-t border-white/10 bg-[#0B2748] px-5 pb-5 shadow-xl md:hidden">
           <div className="flex flex-col">
             {/* SERVICES */}
 
