@@ -7,26 +7,31 @@ export default function ClientHeader() {
   <Navbar />
 
   {/* Header only */}
- <section className="relative h-[340px] w-full overflow-hidden bg-[#195199]">
+ <section className="relative w-full overflow-hidden bg-[#195199]">
 
   {/* Background artwork */}
   <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+    className="absolute inset-0 bg-cover bg-no-repeat"
     style={{
+      backgroundColor: "#195199",
       backgroundImage: "url('/images/client-bg.png')",
+      backgroundBlendMode: "screen",
+      backgroundPosition: "center 30%",
     }}
   />
 
   {/* Header content */}
-  <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-    <h1 className="font-[Urbanist] text-[48px] font-bold leading-[56px] text-[#FFBF00]">
-      Our Clients
-    </h1>
+  <div className="relative z-10 flex min-h-[276px] items-center px-6 sm:px-10 md:px-12 lg:px-16">
+    <div className="mx-auto flex w-full max-w-[1194px] flex-col items-center gap-6 text-center">
+      <h1 className="font-heading text-[32px] font-bold leading-[40px] text-[#FFBF00] sm:text-[40px] sm:leading-[48px] md:text-[44px] md:leading-[52px] lg:text-[48px] lg:leading-[56px]">
+        Our Clients
+      </h1>
 
-    <p className="mt-6 font-[Inter] text-[24px] font-medium leading-[32px] text-white">
-      Trusted by business across industries for comprehensive legal and
-      trademark support.
-    </p>
+      <p className="max-w-[1000px] font-sans text-[18px] font-medium leading-[28px] text-[#E8EEF5] sm:text-[20px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[32px]">
+        Trusted by businesses across industries for comprehensive legal and
+        trademark support.
+      </p>
+    </div>
   </div>
 
 </section>

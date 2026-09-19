@@ -10,7 +10,6 @@ import Testimonials from "@/components/home/Testimonials";
 import TrustedBusinesses from "@/components/home/TrustedBusiness";
 import WhyChooseUs from "@/components/home/WhyLegalMasters";
 import Navbar from "@/components/Navbar"
-import { Contact } from "lucide-react";
 
 export default function Home() {
   return (

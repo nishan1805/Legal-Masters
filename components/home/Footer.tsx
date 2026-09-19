@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className="flex w-full items-center justify-center">
 
-          <div className="flex w-full max-w-[568px] flex-col items-center gap-8 sm:gap-10">
+          <div className="flex w-full max-w-[720px] flex-col items-center gap-8 sm:gap-10">
 
             {/* LOGO + TEXT */}
 
@@ -42,7 +42,7 @@ export default function Footer() {
 
               <div className="flex w-full items-center justify-center">
 
-                <p className="text-center font-[Inter] text-base font-normal leading-6 text-white sm:text-lg sm:leading-7 lg:text-[20px] lg:leading-[28px]">
+                <p className="text-center font-sans text-base font-normal leading-6 text-white sm:text-lg sm:leading-7 md:whitespace-nowrap lg:text-[20px] lg:leading-[28px]">
                   Simplifying Legal, Tax & Compliance for Modern Businesses.
                 </p>
 
@@ -126,7 +126,7 @@ export default function Footer() {
 
             {/* COPYRIGHT */}
 
-            <p className="whitespace-nowrap text-center font-[Inter] text-xs font-normal leading-5 text-white sm:text-sm">
+            <p className="whitespace-nowrap text-center font-sans text-xs font-normal leading-5 text-white sm:text-sm">
               © 2026 Legal Masters. All rights reserved.
             </p>
 
@@ -136,28 +136,28 @@ export default function Footer() {
 
               <a
                 href="#"
-                className="font-[Inter] text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
+                className="font-sans text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
               >
                 Privacy Policy
               </a>
 
               <a
                 href="#"
-                className="font-[Inter] text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
+                className="font-sans text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
               >
                 Terms of Service
               </a>
 
               <a
                 href="#"
-                className="font-[Inter] text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
+                className="font-sans text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
               >
                 Cookie Policy
               </a>
 
               <a
                 href="#"
-                className="font-[Inter] text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
+                className="font-sans text-xs font-normal leading-5 text-[#E8EEF5] transition hover:text-white sm:text-sm"
               >
                 Disclaimer
               </a>

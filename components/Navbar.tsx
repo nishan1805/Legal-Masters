@@ -3,14 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { ChevronRight } from "lucide-react";
+import { LuArrowRight } from "react-icons/lu";
 export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const services = [
     {
-      name: "Company Law",
+      name: "Company Laws",
       href: "/services/company-law",
     },
     {
@@ -38,7 +39,6 @@ export default function Navbar() {
   return (
     <header className="w-full bg-[#0B2748]">
       <nav className="mx-auto flex h-[80px] w-full max-w-[1792px] items-center justify-between px-5 sm:h-[90px] sm:px-8 lg:h-[100px] lg:px-16">
-
         {/* =========================
             LOGO
         ========================== */}
@@ -48,32 +48,28 @@ export default function Navbar() {
             <Image
               src="/images/legal-masters-logo.svg"
               alt="Legal Masters"
-              width={140}
-              height={70}
-              className="block h-auto w-[110px] sm:w-[125px] lg:w-[140px]"
+              width={115}
+              height={64}
+              className="block h-auto w-[90px] sm:w-[100px] lg:w-[115px]"
               priority
             />
           </Link>
         </div>
-
 
         {/* =========================
             DESKTOP NAVIGATION
         ========================== */}
 
         <div className="hidden items-center gap-5 md:flex lg:gap-8 xl:gap-10">
-
           {/* SERVICES */}
 
           <div className="relative">
-
             <button
               type="button"
               onClick={() => setServicesOpen(!servicesOpen)}
               className="flex items-center gap-1.5 whitespace-nowrap text-sm text-white transition hover:text-[#FFB900] lg:gap-2 lg:text-base xl:text-lg"
             >
               Services
-
               <svg
                 width="16"
                 height="16"
@@ -89,38 +85,37 @@ export default function Navbar() {
               </svg>
             </button>
 
-
             {/* SERVICES DROPDOWN */}
 
             {servicesOpen && (
-              <div className="absolute left-1/2 top-full z-50 mt-4 w-[280px] -translate-x-1/2 rounded-xl bg-white p-2 shadow-xl">
-
+              <div className="absolute left-0 top-full z-50 mt-4 w-[300px] overflow-hidden rounded-xl bg-white py-2 shadow-xl">
                 {services.map((service) => (
                   <Link
                     key={service.name}
                     href={service.href}
                     onClick={() => setServicesOpen(false)}
-                    className="block rounded-lg px-4 py-3 text-sm font-medium text-[#0B2748] transition hover:bg-[#E8EEF5] hover:text-[#FFB900]"
+                    className="group flex items-center justify-between px-5 py-3 text-sm font-medium text-[#0B2748] transition hover:bg-[#FFBF00] hover:text-[#ffffff] rounded-sm mx-2"
                   >
                     {service.name}
+                    <ChevronRight
+                      size={18}
+                      strokeWidth={2}
+                      className="opacity-0 transition-opacity group-hover:opacity-100"
+                    />
                   </Link>
                 ))}
-
               </div>
             )}
-
           </div>
-
 
           {/* WHY US */}
 
           <Link
-            href="#why-us"
+            href="/#why-us"
             className="whitespace-nowrap text-sm text-white transition hover:text-[#FFB900] lg:text-base xl:text-lg"
           >
             Why Us
           </Link>
-
 
           {/* CLIENTS */}
 
@@ -131,40 +126,31 @@ export default function Navbar() {
             Clients
           </Link>
 
-
           {/* CONTACT */}
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="whitespace-nowrap text-sm text-white transition hover:text-[#FFB900] lg:text-base xl:text-lg"
           >
             Contact
           </Link>
-
         </div>
-
 
         {/* =======================
             CALLBACK
         ========================== */}
 
         <div className="hidden shrink-0 md:block">
-
           <Link
-            href="#contact"
-            className="flex items-center justify-center gap-1 whitespace-nowrap rounded-full bg-[#FFB900] px-3 py-3 text-sm font-medium text-black transition hover:bg-[#ffc933]"
+            href="/#contact"
+            className="flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FFBF00] px-6 py-3 text-base font-medium text-black transition hover:bg-[#e6ac00]"
           >
+            <span>Request Callback</span>
             <span>
-            Request Callback
+              <LuArrowRight size={20} />
             </span>
-            <span>
-              <FaArrowRightLong />
-            </span>
-
           </Link>
-
         </div>
-
 
         {/* =========================
             MOBILE MENU BUTTON
@@ -176,7 +162,6 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/30 text-white md:hidden"
         >
-
           {mobileOpen ? (
             <svg
               width="24"
@@ -200,11 +185,8 @@ export default function Navbar() {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           )}
-
         </button>
-
       </nav>
-
 
       {/* =========================
           MOBILE NAVIGATION
@@ -212,9 +194,7 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div className="border-t border-white/10 bg-[#0B2748] px-5 pb-5 md:hidden">
-
           <div className="flex flex-col">
-
             {/* SERVICES */}
 
             <button
@@ -237,15 +217,12 @@ export default function Navbar() {
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
-
             </button>
-
 
             {/* MOBILE SERVICES */}
 
             {servicesOpen && (
               <div className="flex flex-col border-b border-white/10 py-2">
-
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -254,26 +231,23 @@ export default function Navbar() {
                       setMobileOpen(false);
                       setServicesOpen(false);
                     }}
-                    className="rounded-lg px-3 py-3 text-sm text-white/90 hover:bg-white/10 hover:text-[#FFB900]"
+                    className="rounded-lg px-3 py-3 text-sm text-white/90  hover:bg-[#FFBF00] hover:text-[#ffffff] rounded-sm mx-2"
                   >
                     {service.name}
                   </Link>
                 ))}
-
               </div>
             )}
-
 
             {/* WHY US */}
 
             <Link
-              href="#why-us"
+              href="/#why-us"
               onClick={() => setMobileOpen(false)}
               className="border-b border-white/10 py-4 text-base font-medium text-white"
             >
               Why Us
             </Link>
-
 
             {/* CLIENTS */}
 
@@ -285,34 +259,29 @@ export default function Navbar() {
               Clients
             </Link>
 
-
             {/* CONTACT */}
 
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="border-b border-white/10 py-4 text-base font-medium text-white"
             >
               Contact
             </Link>
 
-
             {/* CALLBACK */}
 
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#FFB900] px-6 py-3 text-base font-medium text-black"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#FFBF00] px-6 py-3 text-base font-bold text-black transition hover:bg-[#e6ac00]"
             >
               Request Callback
-              <span className="text-xl">→</span>
+              <LuArrowRight size={20} />
             </Link>
-
           </div>
-
         </div>
       )}
-
     </header>
   );
 }

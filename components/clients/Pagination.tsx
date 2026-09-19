@@ -1,16 +1,21 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
 
-export default function Pagination() {
-  const [currentPage, setCurrentPage] = useState(1);
+type PaginationProps = {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+};
 
-  const totalPages = 86;
-
+export default function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) {
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
+      onPageChange(page);
     }
   };
 
@@ -30,47 +35,24 @@ export default function Pagination() {
             <ChevronLeft size={18} strokeWidth={1.5} />
           </button>
 
-          {/* Page 1 */}
-          <button
-            type="button"
-            onClick={() => handlePageChange(1)}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg font-[Inter] text-sm font-medium ${
-              currentPage === 1
-                ? "bg-[#195199] text-white"
-                : "border border-[#DCDCDC] bg-white text-[#525252]"
-            }`}
-          >
-            1
-          </button>
-
-          {/* Page 2 */}
-          <button
-            type="button"
-            onClick={() => handlePageChange(2)}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg font-[Inter] text-sm font-medium ${
-              currentPage === 2
-                ? "bg-[#195199] text-white"
-                : "border border-[#DCDCDC] bg-white text-[#525252]"
-            }`}
-          >
-            2
-          </button>
-
-          {/* Page 3 */}
-          <button
-            type="button"
-            onClick={() => handlePageChange(3)}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg font-[Inter] text-sm font-medium ${
-              currentPage === 3
-                ? "bg-[#195199] text-white"
-                : "border border-[#DCDCDC] bg-white text-[#525252]"
-            }`}
-          >
-            3
-          </button>
+          {/* Pages 1-5 */}
+          {[1, 2, 3, 4, 5].map((page) => (
+            <button
+              key={page}
+              type="button"
+              onClick={() => handlePageChange(page)}
+              className={`flex h-10 w-10 items-center justify-center rounded-lg font-sans text-sm font-medium ${
+                currentPage === page
+                  ? "border-2 border-[#FFBF00] bg-white text-[#212121]"
+                  : "border border-[#DCDCDC] bg-white text-[#525252]"
+              }`}
+            >
+              {page}
+            </button>
+          ))}
 
           {/* Dots */}
-          <span className="flex h-10 w-10 items-center justify-center font-[Inter] text-sm text-[#525252]">
+          <span className="flex h-10 w-10 items-center justify-center font-sans text-sm text-[#525252]">
             ...
           </span>
 
@@ -78,9 +60,9 @@ export default function Pagination() {
           <button
             type="button"
             onClick={() => handlePageChange(totalPages)}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg font-[Inter] text-sm font-medium ${
+            className={`flex h-10 w-10 items-center justify-center rounded-lg font-sans text-sm font-medium ${
               currentPage === totalPages
-                ? "bg-[#195199] text-white"
+                ? "border-2 border-[#FFBF00] bg-white text-[#212121]"
                 : "border border-[#DCDCDC] bg-white text-[#525252]"
             }`}
           >

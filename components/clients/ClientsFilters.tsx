@@ -45,7 +45,7 @@ export default function ClientFilters({
               <input
                 type="text"
                 placeholder="Search trademarks..."
-                className="min-w-0 flex-1 bg-transparent font-[Inter] text-[16px] font-normal leading-6 text-[#101010] outline-none placeholder:text-[#757575]"
+                className="min-w-0 flex-1 bg-transparent font-sans text-[16px] font-normal leading-6 text-[#101010] outline-none placeholder:text-[#757575]"
               />
             </div>
 
@@ -53,7 +53,7 @@ export default function ClientFilters({
             <button
               type="button"
               onClick={handleSearch}
-              className="flex h-[36px] w-[94px] shrink-0 items-center justify-center rounded-[8px] bg-[#FFBF00] px-5 font-[Inter] text-[16px] font-medium leading-6 text-white"
+              className="flex h-[36px] w-[94px] shrink-0 items-center justify-center rounded-[8px] bg-[#FFBF00] px-5 font-sans text-[16px] font-medium leading-6 text-[#111111]"
             >
               Search
             </button>
@@ -62,7 +62,7 @@ export default function ClientFilters({
           {/* Class filter */}
           <button
             type="button"
-            className="flex h-[36px] w-[68px] items-center justify-center gap-1 rounded-[8px] border border-[#DCDCDC] bg-white font-[Inter] text-[14px] font-normal leading-5 text-[#212121]"
+            className="flex h-[52px] items-center justify-center gap-1 rounded-[8px] border border-[#DCDCDC] bg-white px-4 font-sans text-[14px] font-normal leading-5 text-[#212121]"
           >
             <Filter size={16} strokeWidth={1.5} />
 
@@ -84,7 +84,7 @@ export default function ClientFilters({
                 key={tab}
                 type="button"
                 onClick={() => setActiveTab(tab)}
-                className={`flex h-[40px] items-center px-3 font-[Inter] text-[14px] leading-5 transition ${
+                className={`flex h-[40px] items-center px-3 font-sans text-[14px] leading-5 transition ${
                   isActive
                     ? "border-b-2 border-[#FFBF00] font-medium text-[#195199]"
                     : "font-normal text-[#525252]"

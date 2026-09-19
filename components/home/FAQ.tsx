@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 /* =====================================
    FAQ DATA
@@ -59,9 +60,9 @@ function FAQItem({ question, answer }: FAQItemProps) {
     <div
       className={`
         w-full overflow-hidden rounded-[8px]
-        border border-[#E8EEF5]
+        border-2 border-[#C9D6E8]
         transition-all duration-300
-        ${isOpen ? "min-h-[144px]" : "h-[64px]"}
+        ${isOpen ? "min-h-[144px]" : "min-h-[64px]"}
       `}
     >
       {/* =================================
@@ -73,7 +74,6 @@ function FAQItem({ question, answer }: FAQItemProps) {
           flex min-h-[64px] w-full
           items-center justify-between
           gap-4
-          border border-[#E8EEF5]
           bg-[#E8EEF5]
           p-4
         "
@@ -83,7 +83,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
         <p
           className="
             min-w-0
-            font-[Inter]
+            font-sans
             text-[14px]
             font-medium
             leading-6
@@ -112,15 +112,13 @@ function FAQItem({ question, answer }: FAQItemProps) {
             className={`
               flex h-6 w-6
               items-center justify-center
-              text-[24px]
-              leading-none
               text-white
               transition-transform
               duration-300
-              ${isOpen ? "-rotate-90" : "rotate-90"}
+              ${isOpen ? "rotate-180" : "rotate-0"}
             `}
           >
-            ›
+            <ChevronDown size={20} strokeWidth={2} />
           </span>
         </button>
       </div>
@@ -141,7 +139,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
         >
           <p
             className="
-              font-[Inter]
+              font-sans
               text-[14px]
               font-normal
               leading-6
@@ -204,7 +202,7 @@ export default function FAQ() {
 
           <h2
             className="
-              font-[Urbanist]
+              font-heading
               text-[32px]
               font-bold
               leading-10
@@ -223,7 +221,7 @@ export default function FAQ() {
           <p
             className="
               max-w-[1000px]
-              font-[Inter]
+              font-sans
               text-[16px]
               font-normal
               leading-6
@@ -234,8 +232,7 @@ export default function FAQ() {
               lg:leading-8
             "
           >
-            Find answers to common questions about our legal and compliance
-            services.
+            Quick answers to common queries.
           </p>
         </div>
 

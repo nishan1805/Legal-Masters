@@ -1,16 +1,17 @@
 
 import Image from "next/image";
+import { Check } from "lucide-react";
 
 const steps = [
   {
     title: "1. Share Your Requirement",
     description:
-      "Share your business requirements with our experts and tell us what assistance you need.",
+      "Tell us about your business needs and required legal services.",
     points: [
       "Quick and simple onboarding process",
-      "Share your business requirements",
-      "Get expert guidance",
-      "Start your process easily",
+      "Share your business or compliance requirement",
+      "Upload basic details securely",
+      "Transparent and hassle-free start",
     ],
     image: "/images/howitwork/image1.svg",
   },
@@ -79,11 +80,11 @@ export default function HowItWorks() {
         ========================== */}
         <div className="flex w-full flex-col items-center gap-3 text-center sm:gap-4">
 
-          <h2 className="font-[Urbanist] text-[32px] font-bold leading-[40px] text-[#0B2748] sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
+          <h2 className="font-heading text-[32px] font-bold leading-[40px] text-[#0B2748] sm:text-[40px] sm:leading-[48px] lg:text-[48px] lg:leading-[56px]">
             How Legal Masters Works
           </h2>
 
-          <p className="max-w-[900px] font-[Inter] text-base font-normal leading-6 text-[#555555] sm:text-lg sm:leading-7 lg:text-[24px] lg:leading-[32px]">
+          <p className="max-w-[900px] font-sans text-base font-normal leading-6 text-[#555555] sm:text-lg sm:leading-7 lg:text-[24px] lg:leading-[32px]">
             Simple, transparent process to get your business services completed
           </p>
 
@@ -93,7 +94,7 @@ export default function HowItWorks() {
         {/* =========================
             STEPS
         ========================== */}
-        <div className="mt-10 flex w-full flex-col gap-12 sm:mt-12 sm:gap-16 lg:mt-16 lg:gap-10">
+        <div className="mt-10 flex w-full flex-col gap-12 sm:mt-12 sm:gap-16 lg:mt-16 lg:gap-16">
 
           {steps.map((step, index) => (
             <div
@@ -129,7 +130,7 @@ export default function HowItWorks() {
               >
 
                 {/* Title */}
-                <h3 className="font-[Inter] text-[24px] font-semibold leading-8 text-[#0B2748] sm:text-[28px] sm:leading-9 lg:h-[48px] lg:text-[32px] lg:leading-[40px]">
+                <h3 className="font-sans text-[24px] font-semibold leading-8 text-[#0B2748] sm:text-[28px] sm:leading-9 lg:h-[48px] lg:text-[32px] lg:leading-[40px]">
                   {step.title}
                 </h3>
 
@@ -137,7 +138,7 @@ export default function HowItWorks() {
                 <div className="flex w-full flex-col gap-4 sm:gap-5">
 
                   {/* Description */}
-                  <p className="font-[Inter] text-base font-normal leading-6 text-[#525252] sm:text-lg sm:leading-7 lg:text-[20px] lg:leading-7">
+                  <p className="font-sans text-base font-normal leading-6 text-[#525252] sm:text-lg sm:leading-7 lg:text-[20px] lg:leading-7">
                     {step.description}
                   </p>
 
@@ -148,10 +149,10 @@ export default function HowItWorks() {
                     {step.points.map((point) => (
                       <li
                         key={point}
-                        className="flex w-full items-start gap-3 font-[Inter] text-base leading-6 text-[#333333] sm:text-lg sm:leading-7 lg:text-[20px] lg:leading-7"
+                        className="flex w-full items-start gap-3 font-sans text-base leading-6 text-[#333333] sm:text-lg sm:leading-7 lg:text-[20px] lg:leading-7"
                       >
-                        <span className="shrink-0 text-[#174A8B]">
-                          ✓
+                        <span className="mt-0.5 shrink-0 text-[#174A8B]">
+                          <Check size={20} strokeWidth={2.5} />
                         </span>
 
                         <span>{point}</span>

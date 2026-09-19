@@ -1,6 +1,6 @@
-import { Building2 } from "lucide-react";
+import { FaBuilding } from "react-icons/fa";
 import Link from "next/link";
-import { ArrowRight, FileCheck } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const financeInsuranceCards = [
   {
@@ -44,15 +44,14 @@ export default function FinanceInsurance() {
 
             {/* Icon Container */}
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px] border border-[#B8C9DF] bg-[#E8EEF5]">
-              <Building2
+              <FaBuilding
                 size={20}
-                strokeWidth={2}
                 className="text-[#195199]"
               />
             </div>
 
             {/* Heading */}
-            <h2 className="font-[Inter] text-[24px] font-semibold leading-8 text-[#212121] md:text-[30px] lg:text-[32px] lg:leading-[40px]">
+            <h2 className="font-sans text-[24px] font-semibold leading-8 text-[#212121] md:text-[30px] lg:text-[32px] lg:leading-[40px]">
              Insurance
             </h2>
 
@@ -60,7 +59,7 @@ export default function FinanceInsurance() {
 
 
           {/* Subheading */}
-          <p className="max-w-[1000px] text-left font-[Inter] text-[18px] font-normal leading-7 text-[#525252] md:text-[20px] md:leading-7">
+          <p className="max-w-[1000px] text-left font-sans text-[18px] font-normal leading-7 text-[#525252] md:text-[20px] md:leading-7">
             Protect yourself, your assets, and your business with suitable insurance solutions.
           </p>
 
@@ -78,11 +77,11 @@ export default function FinanceInsurance() {
         >
           {/* Heading + Description */}
           <div className="flex flex-col gap-4">
-            <h3 className="font-[Inter] text-[20px] font-semibold leading-7 text-[#212121]">
+            <h3 className="font-sans text-[20px] font-semibold leading-7 text-[#212121]">
               {card.title}
             </h3>
 
-            <p className="font-[Inter] text-[14px] font-normal leading-5 text-[#525252]">
+            <p className="font-sans text-[14px] font-normal leading-5 text-[#525252]">
               {card.description}
             </p>
           </div>
@@ -90,11 +89,11 @@ export default function FinanceInsurance() {
           {/* Enquire Now */}
           <Link
             href="/contact"
-            className="inline-flex h-10 w-fit items-center gap-1 py-2 font-[Inter] text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
+            className="inline-flex h-10 w-fit items-center gap-1 py-2 font-sans text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
           >
             <span>Enquire now</span>
 
-            <ArrowRight
+            <ChevronRight
               size={24}
               strokeWidth={1.8}
             />

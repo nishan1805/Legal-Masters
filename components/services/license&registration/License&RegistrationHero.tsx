@@ -84,12 +84,12 @@ export default function LicenseResgistrationHero() {
 
         <div className="mx-auto flex w-full max-w-[1194px] flex-col items-center gap-6 text-center">
 
-          <h1 className="font-[Urbanist] text-[32px] font-bold leading-[40px] text-[#FFBF00] sm:text-[40px] sm:leading-[48px] md:text-[44px] md:leading-[52px] lg:text-[48px] lg:leading-[56px]">
+          <h1 className="font-heading text-[32px] font-bold leading-[40px] text-[#FFBF00] sm:text-[40px] sm:leading-[48px] md:text-[44px] md:leading-[52px] lg:text-[48px] lg:leading-[56px]">
            License & Registration
           </h1>
 
-          <p className="max-w-[1000px] font-[Inter] text-[18px] font-medium leading-[28px] text-[#E8EEF5] sm:text-[20px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[32px]">
-           Protect your ideas, innovations, creative works, and brand identity with comprehensive Intellectual Property (IP) services. 
+          <p className="max-w-[1000px] font-sans text-[18px] font-medium leading-[28px] text-[#E8EEF5] sm:text-[20px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[32px]">
+           Obtain essential business registrations and government licenses quickly, ensuring smooth operations and regulatory compliance.
           </p>
 
         </div>
