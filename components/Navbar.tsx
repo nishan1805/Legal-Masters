@@ -9,6 +9,25 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+   const navbarRef = useRef<HTMLElement>(null);
+  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const services = [
     {
       name: "Company Laws",
@@ -37,7 +56,10 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0B2748]">
+    <header 
+      ref={navbarRef}
+      className="sticky top-0 z-50 w-full bg-[#0B2748]"
+      >
       <nav className="mx-auto flex h-[80px] w-full max-w-[1792px] items-center justify-between px-5 sm:h-[90px] sm:px-8 lg:h-[100px] lg:px-16">
         {/* =========================
             LOGO
