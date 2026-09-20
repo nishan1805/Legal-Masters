@@ -1,13 +1,8 @@
-import Navbar from "@/components/Navbar";
-
 export default function ClientHeader() {
   return (
-   <>
-  {/* Navbar */}
-  <Navbar />
-
-  {/* Header only */}
- <section className="relative w-full overflow-hidden bg-[#195199]">
+    <>
+      {/* Header only */}
+      <section className="relative w-full overflow-hidden bg-[#195199]">
 
   {/* Background artwork */}
   <div
