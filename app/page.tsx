@@ -1,20 +1,16 @@
 import ContactSection from "@/components/home/Contact";
-import BusinessJourney from "@/components/home/CTA";
 import FAQ from "@/components/home/FAQ";
-import Footer from "@/components/home/Footer";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
-import TrustedIndustries from "@/components/home/Industries";
 import ServicesSection from "@/components/home/Services";
 import Testimonials from "@/components/home/Testimonials";
 import TrustedBusinesses from "@/components/home/TrustedBusiness";
+import TrustedIndustries from "@/components/home/Industries";
 import WhyChooseUs from "@/components/home/WhyLegalMasters";
-import Navbar from "@/components/Navbar"
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Hero />
       <ServicesSection />
       <HowItWorks />
@@ -24,8 +20,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <ContactSection />
-      <BusinessJourney />
-      <Footer />
     </div>
   );
 }
