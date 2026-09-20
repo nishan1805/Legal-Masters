@@ -97,17 +97,20 @@ export default function AccountAuditCards() {
           </div>
 
           {/* Enquire Now */}
-          <Link
-            href="/contact"
-            className="inline-flex h-10 w-fit items-center gap-1 py-2 font-sans text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
-          >
-            <span>Enquire now</span>
-
-            <ChevronRight
-              size={24}
-              strokeWidth={1.8}
-            />
-          </Link>
+         <Link
+           href={`https://wa.me/919589393949?text=${encodeURIComponent(
+             `Hi Legal Masters, I would like to enquire about ${card.title}. Please assist me.`
+           )}`}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="inline-flex h-10 w-fit items-center gap-1 py-2 font-sans text-[16px] font-semibold leading-6 text-[#8C6900] transition hover:text-[#B58800]"
+           >
+           <span>Enquire now</span>
+           <ChevronRight
+             size={24}
+             strokeWidth={1.8}
+             />
+         </Link>
         </div>
       ))}
     </div>
