@@ -1,13 +1,8 @@
-
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
 
 export default function IPRHeroSection() {
   return (
     <header className="relative w-full overflow-hidden bg-[#174A8B]">
-
-      {/* Reusable Navbar */}
-      <Navbar />
 
       {/* Background Artwork */}
       <div className="pointer-events-none absolute inset-0 z-0">
