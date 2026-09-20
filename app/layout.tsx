@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter, Poppins, Urbanist } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "@/components/Navbar";
+import BusinessJourney from "@/components/home/CTA";
+import Footer from "@/components/home/Footer";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -75,7 +79,10 @@ export default function RootLayout({
       className={`${inter.variable} ${urbanist.variable} ${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
         {children}
+        <BusinessJourney />
+        <Footer />
       </body>
     </html>
   );
