@@ -100,7 +100,7 @@ export default function Hero() {
           <div className="mt-7 flex flex-row gap-3 sm:mt-9 sm:gap-4">
 
             <Link
-               href="https://wa.me/916262353456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20speak%20with%20an%20expert%20regarding%20your%20legal%2C%20tax%2C%20and%20compliance%20services.%20Please%20assist%20me."
+               href="https://wa.me/916262343456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20speak%20with%20an%20expert%20regarding%20your%20legal%2C%20tax%2C%20and%20compliance%20services.%20Please%20assist%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-[48px] items-center justify-center rounded-full bg-[#E8AE00] px-4 font-sans text-sm font-medium leading-6 text-[#111111] transition hover:bg-[#E5A700] sm:flex-none sm:px-7 sm:text-base"
