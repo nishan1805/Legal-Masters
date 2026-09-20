@@ -104,7 +104,7 @@ export default function FinanceCards() {
 
           {/* Enquire Now */}
           <Link
-            href={`https://wa.me/919589393949?text=${encodeURIComponent(
+            href={`https://wa.me/916262343456?text=${encodeURIComponent(
              `Hi Legal Masters, I would like to enquire about ${card.title}. Please assist me.`
             )}`}
            target="_blank"
