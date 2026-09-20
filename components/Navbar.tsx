@@ -164,7 +164,7 @@ export default function Navbar() {
 
         <div className="hidden shrink-0 md:block">
           <Link
-            href="https://wa.me/916262353456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
+            href="https://wa.me/916262343456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FFBF00] px-6 py-3 text-base font-medium text-black transition hover:bg-[#e6ac00]"
@@ -296,7 +296,7 @@ export default function Navbar() {
             {/* CALLBACK */}
 
             <Link
-              href="https://wa.me/916262353456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
+              href="https://wa.me/916262343456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
