@@ -37,7 +37,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="relative z-50 w-full bg-[#0B2748]">
+    <header className="sticky top-0 z-50 w-full bg-[#0B2748]">
       <nav className="mx-auto flex h-[80px] w-full max-w-[1792px] items-center justify-between px-5 sm:h-[90px] sm:px-8 lg:h-[100px] lg:px-16">
         {/* =========================
             LOGO
@@ -142,9 +142,11 @@ export default function Navbar() {
 
         <div className="hidden shrink-0 md:block">
           <Link
-            href="/#contact"
+            href="https://wa.me/919589393949?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#FFBF00] px-6 py-3 text-base font-medium text-black transition hover:bg-[#e6ac00]"
-          >
+            >
             <span>Request Callback</span>
             <span>
               <LuArrowRight size={20} />
@@ -272,10 +274,12 @@ export default function Navbar() {
             {/* CALLBACK */}
 
             <Link
-              href="/#contact"
+              href="https://wa.me/919589393949?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20request%20a%20callback%20regarding%20your%20services.%20Please%20contact%20me%20at%20your%20convenience."
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#FFBF00] px-6 py-3 text-base font-bold text-black transition hover:bg-[#e6ac00]"
-            >
+              >
               Request Callback
               <LuArrowRight size={20} />
             </Link>
