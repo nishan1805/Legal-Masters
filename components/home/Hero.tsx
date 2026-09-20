@@ -108,12 +108,12 @@ export default function Hero() {
               Talk to Experts
             </Link>
 
-            <Link
+            <a
               href="#services"
               className="inline-flex h-[48px] flex-1 items-center justify-center gap-[6px] rounded-[24px] border-[1.5px] border-[#B58800] px-3 py-3 font-sans text-sm font-medium leading-6 text-[#B58800] transition hover:bg-[#FFF7D6] sm:flex-none sm:whitespace-nowrap sm:px-6 sm:text-base"
-            >
+              >
               Explore Services
-            </Link>
+            </a>
 
           </div>
 
