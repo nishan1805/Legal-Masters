@@ -47,7 +47,7 @@ export default function ServicesSection() {
     {
       title: "Finance & Investment",
       description:
-        "Access customized financing, insurance, and investment solutions to support business growth, expansion, and long-term financial security.",
+        "Access customised financing, insurance, and investment solutions to support business growth, expansion, and long-term financial security.",
       icon: "/images/services/finance-icon.svg",
       link: "/services/finance-investment",
       count: 17,
@@ -57,8 +57,8 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="w-full overflow-hidden bg-[#174A8B] px-4 py-10 sm:px-6 sm:py-12 lg:px-[120px] lg:py-[64px]"
-    >
+      className="scroll-mt-[100px] w-full overflow-hidden bg-[#174A8B] px-4 py-10 sm:px-6 sm:py-12 lg:px-[120px] lg:py-[64px]"
+      >
       <div className="mx-auto flex w-full max-w-[1200px] flex-col">
         {/* =========================
             HEADING
