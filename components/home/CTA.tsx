@@ -117,7 +117,7 @@ export default function BusinessJourneyCTA() {
               type="button"
               onClick={() =>
                 window.open(
-                  "https://wa.me/916262353456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20speak%20with%20an%20expert%20regarding%20your%20legal%2C%20tax%2C%20and%20compliance%20services.%20Please%20assist%20me.",
+                  "https://wa.me/916262343456?text=Hi%20Legal%20Masters%2C%20I%20would%20like%20to%20speak%20with%20an%20expert%20regarding%20your%20legal%2C%20tax%2C%20and%20compliance%20services.%20Please%20assist%20me.",
                   "_blank"
                 )
               }
